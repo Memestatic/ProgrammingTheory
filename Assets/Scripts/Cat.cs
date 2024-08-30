@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cat : Animal
+public class Cat : Animal   // INHERITANCE
 {
     private Rigidbody catRB;
     void Start()
@@ -18,7 +18,7 @@ public class Cat : Animal
         return "meow";
     }
 
-    public override void Jump()
+    public override void Jump() // POLYMORPHISM
     {
         catRB.AddForce(new Vector3(0, 1, -0.5f) * jumpForce, ForceMode.Impulse);
     }

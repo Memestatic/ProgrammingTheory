@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deer : Animal
+public class Deer : Animal  // INHERITANCE
 {
     private Rigidbody deerRB;
     void Start()
@@ -18,7 +18,7 @@ public class Deer : Animal
         return "roar";
     }
 
-    public override void Jump()
+    public override void Jump()     // POLYMORPHISM
     {
         deerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }

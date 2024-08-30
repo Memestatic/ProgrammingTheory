@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chicken : Animal
+public class Chicken : Animal   // INHERITANCE
 {
     private Rigidbody chickenRB;
 
@@ -19,7 +19,7 @@ public class Chicken : Animal
         return "cluck";
     }
 
-    public override void Jump()
+    public override void Jump() // POLYMORPHISM
     {
         chickenRB.AddForce(new Vector3(0, 1, 0.5f) * jumpForce, ForceMode.Impulse);
     }

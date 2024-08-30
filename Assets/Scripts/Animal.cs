@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Animal : MonoBehaviour
+public abstract class Animal : MonoBehaviour    
 {
     protected string animalType;
     protected float jumpForce;
 
     private string animalName;
-    public string AnimalName
+    public string AnimalName    // ENCAPSULATION
     {
         get { return animalName; }
         set
@@ -25,8 +25,9 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    
     public abstract string MakeSound();
-    public void SayHello()
+    public void SayHello()  // ABSTRACTION
     {
         Debug.Log($"Hi, my name is {animalName}. I am {animalType} and I {MakeSound()}.");
     }
