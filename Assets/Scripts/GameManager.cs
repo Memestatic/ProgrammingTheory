@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public List<Animal> animals;
     void Start()
     {
-        
+        for (int i = 0; i < animals.Count; i++)
+        {
+            animals[i].AnimalName = Menu.instance.names[i];
+        }
+
+        StartCoroutine(ChainJumping());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ChainJumping()
     {
-        
+        yield return new WaitForSeconds(2);
+        animals[0].Jump();
+        animals[0].SayHello();
+        yield return new WaitForSeconds(2);
+        animals[1].Jump();
+        animals[1].SayHello();
+        yield return new WaitForSeconds(2);
+        animals[2].Jump();
+        animals[2].SayHello();
     }
 }
